@@ -1,0 +1,154 @@
+// body{
+//   max-width: 1152px;
+//   margin: 0 auto;
+// }
+
+$mb: 767px;
+
+header{
+  padding-top: 60px;
+  padding-bottom: 20px;
+  height: 40px;
+  @media screen and (max-width: 767px){
+    display: none;
+  }
+  .header_container{
+    max-width: 1152px;
+    margin: 0 auto;
+    .header_menu{
+      display: flex;
+      justify-content: end;
+      .header_content{
+        list-style: none;
+        padding-left: 25px;
+        a{
+          text-decoration: none;
+          color: black;
+        }
+      }
+    }
+  }
+}
+
+section{
+  max-width: 1152px;
+  margin: 0 auto;
+}
+
+// ここからmain_visualのPC用とSp用の画像切り替え用CSS
+.pc_img{
+  display: block; 
+  @media screen and (max-width: 767px){
+    display: none;
+    width: 100%;
+  }
+}
+.sp_img{
+  display: none; 
+  @media screen and (max-width: 767px){
+    display: block;
+    width: 100%;
+  }
+}
+// main_visualのPC用とSp用の画像切り替え用CSSここまで
+
+.main_img_box{
+  position: relative;
+  height: 448px;
+  width: 1024px;
+  margin: 0 auto;
+  @media screen and (max-width: 767px){
+    margin-top: 270px;
+    height: 300px;
+    width: 100%;
+  }
+  .main_img_left_subbox,
+  .main_img_right_subbox{
+    position: absolute;
+  }
+  .main_img_left_subbox{
+    top: -115px;
+    left: -75px;
+    @media screen and (max-width: 767px){
+      top: -260px;
+      left: 70px;
+    }
+  }
+  .main_img_right_subbox{
+    top: 236px;
+    left: 589px;
+    @media screen and (max-width: 767px) {
+      top: 30px;
+      left: 0;
+    }
+  }
+}
+
+.textbox{
+  max-width: 1152px;
+  margin: 0 auto;
+  .av_text{
+    margin-top: 30px;
+    @media screen and (max-width: 767px){
+      text-align: center;
+    }
+    .br{
+      display: none;
+      @media screen and (max-width: 767px){
+        display: block;
+      }
+    }
+  }
+}
+
+.subtitle{
+  text-align: center;
+  font-size: 30px;
+  margin-top: 70px;
+  margin-bottom: 30px;
+}
+
+.card_container{
+  width: 1024px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto; 
+  @media screen and (max-width: 767px){
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .card{
+    height: 430px;
+    width: 320px;
+    margin-bottom: 30px;
+    transition: all .2s;
+    &:hover{
+      box-shadow: 0 0 10px -2px;
+    }
+    p{
+      padding-left: 210px;
+    }
+    .card_text{
+      height: 170px;
+      max-width: 305px;
+      margin: 0 auto;
+      p{
+        margin-top: 20px;
+        padding-left: 10px;
+      }
+    }
+  }
+}
+
+footer{
+  margin-top: 80px;
+  height: 100px;
+  background-color: black;
+  p{
+    color: white;
+    text-align: center;
+    padding-top: 40px;
+  }
+}
