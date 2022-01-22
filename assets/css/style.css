@@ -1,7 +1,6 @@
 header {
-  padding-top: 60px;
-  padding-bottom: 20px;
-  height: 40px;
+  padding-top: 56px;
+  padding-bottom: 52px;
 }
 
 @media screen and (max-width: 767px) {
@@ -26,7 +25,7 @@ header .header_container .header_menu {
 
 header .header_container .header_menu .header_content {
   list-style: none;
-  padding-left: 25px;
+  margin-right: 10px;
 }
 
 header .header_container .header_menu .header_content a {
