@@ -1,6 +1,6 @@
 header {
   padding-top: 56px;
-  padding-bottom: 52px;
+  padding-bottom: 55px;
 }
 
 @media screen and (max-width: 767px) {
@@ -63,7 +63,7 @@ section {
 
 .main_img_box {
   position: relative;
-  height: 448px;
+  height: 449px;
   width: 1024px;
   margin: 0 auto;
 }
@@ -82,8 +82,8 @@ section {
 }
 
 .main_img_box .main_img_left_subbox {
-  top: -115px;
-  left: -75px;
+  top: -116px;
+  left: -62px;
 }
 
 @media screen and (max-width: 767px) {
@@ -94,8 +94,8 @@ section {
 }
 
 .main_img_box .main_img_right_subbox {
-  top: 236px;
-  left: 589px;
+  top: 237px;
+  left: 591px;
 }
 
 @media screen and (max-width: 767px) {
@@ -108,10 +108,12 @@ section {
 .textbox {
   max-width: 1152px;
   margin: 0 auto;
+  font-size: 24px;
+  padding-left: 5px;
 }
 
 .textbox .av_text {
-  margin-top: 30px;
+  margin-top: 19px;
 }
 
 @media screen and (max-width: 767px) {
@@ -132,9 +134,9 @@ section {
 
 .subtitle {
   text-align: center;
-  font-size: 30px;
-  margin-top: 70px;
-  margin-bottom: 30px;
+  font-size: 27px;
+  margin-top: 83px;
+  margin-bottom: 54px;
 }
 
 .card_container {
