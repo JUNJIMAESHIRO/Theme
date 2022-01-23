@@ -31,6 +31,7 @@ header .header_container .header_menu .header_content {
 header .header_container .header_menu .header_content a {
   text-decoration: none;
   color: black;
+  font-family: YuGothic,'Yu Gothic',sans-serif;
 }
 
 section {
