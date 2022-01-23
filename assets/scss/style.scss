@@ -57,7 +57,7 @@ section{
 .main_img_box{
   position: relative;
   height: 449px;
-  width: 1024px;
+  width: 1023px;
   margin: 0 auto;
   @media screen and (max-width: $mb){
     margin-top: 270px;
@@ -117,6 +117,7 @@ section{
   display: flex;
   justify-content: space-between;
   margin: 0 auto; 
+  margin-bottom: 74px;
   @media screen and (max-width: $mb){
     width: 100%;
     display: flex;
@@ -124,9 +125,8 @@ section{
     align-items: center;
   }
   .card{
-    height: 430px;
+    height: 390px;
     width: 320px;
-    margin-bottom: 30px;
     transition: all .2s;
     &:hover{
       box-shadow: 0 0 10px -2px;
@@ -135,8 +135,8 @@ section{
       padding-left: 210px;
     }
     .card_text{
-      height: 170px;
-      max-width: 305px;
+      height: 135px;
+      max-width: 320px;
       margin: 0 auto;
       p{
         margin-top: 20px;
