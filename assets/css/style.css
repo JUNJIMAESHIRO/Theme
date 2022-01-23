@@ -25,13 +25,15 @@ header .header_container .header_menu {
 
 header .header_container .header_menu .header_content {
   list-style: none;
-  margin-right: 10px;
+  margin-left: 19.1px;
+  margin-right: 11px;
 }
 
 header .header_container .header_menu .header_content a {
   text-decoration: none;
   color: black;
   font-family: YuGothic,'Yu Gothic',sans-serif;
+  font-size: 14px;
 }
 
 section {
