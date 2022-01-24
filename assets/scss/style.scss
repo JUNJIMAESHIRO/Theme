@@ -172,9 +172,13 @@ section{
 }
 
 footer{
-  margin-top: 80px;
-  height: 100px;
+  max-width: 1281px;
+  margin: 0 auto;
+  margin-top: 127px;
+  height: 128px;
   background-color: black;
+  padding-top: 56px;
+  letter-spacing: 0.2px;
   p{
     color: white;
     text-align: center;
