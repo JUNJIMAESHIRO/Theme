@@ -187,11 +187,6 @@ section {
           box-shadow: 0 0 10px -2px;
 }
 
-.card_container a .card p {
-  padding-left: 235px;
-  font-size: 12px;
-}
-
 .card_container a .card .card_text {
   height: 140px;
   max-width: 320px;
@@ -200,6 +195,8 @@ section {
 
 .card_container a .card .card_text .rmcss {
   border-bottom: solid 1px black;
+  padding-left: 235px;
+  font-size: 12px;
 }
 
 .card_container a .card .card_text p {

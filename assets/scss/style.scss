@@ -135,16 +135,14 @@ section{
       &:hover{
         box-shadow: 0 0 10px -2px;
       }
-      p{
-        padding-left: 235px;
-        font-size: 12px;
-      }
       .card_text{
         height: 140px;
         max-width: 320px;
         margin: 0 auto;
         .rmcss{
           border-bottom:solid 1px black ;
+          padding-left: 235px;
+          font-size: 12px;
         }
         p{
           margin-top: 11px;
