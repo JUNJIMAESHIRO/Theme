@@ -172,6 +172,7 @@ section {
 .card_container a {
   text-decoration: none;
   color: black;
+  letter-spacing: 0.3px;
 }
 
 .card_container a .card {
@@ -187,11 +188,12 @@ section {
 }
 
 .card_container a .card p {
-  padding-left: 210px;
+  padding-left: 235px;
+  font-size: 12px;
 }
 
 .card_container a .card .card_text {
-  height: 135px;
+  height: 140px;
   max-width: 320px;
   margin: 0 auto;
 }

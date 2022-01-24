@@ -127,6 +127,7 @@ section{
   a{
     text-decoration: none;
     color: black;
+    letter-spacing: 0.3px;
     .card{
       height: 390px;
       width: 320px;
@@ -135,10 +136,11 @@ section{
         box-shadow: 0 0 10px -2px;
       }
       p{
-        padding-left: 210px;
+        padding-left: 235px;
+        font-size: 12px;
       }
       .card_text{
-        height: 135px;
+        height: 140px;
         max-width: 320px;
         margin: 0 auto;
         p{
