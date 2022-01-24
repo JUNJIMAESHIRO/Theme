@@ -189,6 +189,7 @@ section {
 
 .card_container a .card .rmcssbox {
   width: 100%;
+  border-bottom: 1px solid #000;
 }
 
 .card_container a .card .rmcssbox .rmcss {
@@ -197,7 +198,7 @@ section {
   font-size: 12px;
   padding-bottom: 14px;
   position: relative;
-  width: 28%;
+  width: 5%;
 }
 
 .card_container a .card .rmcssbox .rmcss::after {

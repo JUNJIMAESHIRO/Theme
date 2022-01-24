@@ -137,13 +137,14 @@ section{
       }
       .rmcssbox{
         width: 100%;
+        border-bottom: 1px solid #000;
         .rmcss{
           border-bottom:solid 1px black ;
           margin-left: 231px;
           font-size: 12px;
           padding-bottom: 14px;
           position: relative;
-          width: 28%;
+          width: 5%;
           &::after{
             content: '';
             position: absolute;
