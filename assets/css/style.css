@@ -201,7 +201,7 @@ section {
   position: relative;
 }
 
-.card_container a .card .card_text .rmcss:after {
+.card_container a .card .card_text .rmcss::after {
   content: '';
   position: absolute;
   width: 0;
@@ -213,7 +213,7 @@ section {
   display: block;
 }
 
-.card_container a .card .card_text .rmcss:hover:after {
+.card_container a .card .card_text .rmcss:hover::after {
   width: 100%;
   border-bottom: 3px solid #000;
 }

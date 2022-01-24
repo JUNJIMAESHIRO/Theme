@@ -145,7 +145,7 @@ section{
           font-size: 12px;
           padding-bottom: 2px;
           position: relative;
-          &:after{
+          &::after{
             content: '';
             position: absolute;
             width: 0;
@@ -155,7 +155,7 @@ section{
             border-bottom: 3px solid #000;
             display: block;
           }
-          &:hover:after{
+          &:hover::after{
             width: 100%;
             border-bottom: 3px solid #000;
           }
