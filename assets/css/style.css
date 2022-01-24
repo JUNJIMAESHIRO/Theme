@@ -187,15 +187,20 @@ section {
           box-shadow: 0 0 10px -2px;
 }
 
-.card_container a .card .rmcss {
-  border-bottom: solid 1px black;
-  padding-left: 235px;
-  font-size: 12px;
-  padding-bottom: 2px;
-  position: relative;
+.card_container a .card .rmcssbox {
+  width: 100%;
 }
 
-.card_container a .card .rmcss::after {
+.card_container a .card .rmcssbox .rmcss {
+  border-bottom: solid 1px black;
+  padding-left: 234px;
+  font-size: 12px;
+  padding-bottom: 14px;
+  position: relative;
+  width: 28%;
+}
+
+.card_container a .card .rmcssbox .rmcss::after {
   content: '';
   position: absolute;
   width: 0;
@@ -207,7 +212,7 @@ section {
   display: block;
 }
 
-.card_container a .card .rmcss:hover::after {
+.card_container a .card .rmcssbox .rmcss:hover::after {
   width: 100%;
   border-bottom: 3px solid #000;
 }
