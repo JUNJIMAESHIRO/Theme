@@ -117,7 +117,7 @@ section{
   display: flex;
   justify-content: space-between;
   margin: 0 auto; 
-  margin-bottom: 74px;
+  margin-bottom: 63px;
   @media screen and (max-width: $mb){
     width: 100%;
     display: flex;
@@ -129,7 +129,7 @@ section{
     color: black;
     letter-spacing: 0.3px;
     .card{
-      height: 390px;
+      height: 402px;
       width: 320px;
       transition: all .3s;
       &:hover{
@@ -143,6 +143,9 @@ section{
         height: 140px;
         max-width: 320px;
         margin: 0 auto;
+        .rmcss{
+          border-bottom:solid 1px black ;
+        }
         p{
           margin-top: 11px;
           padding-left: 16px;

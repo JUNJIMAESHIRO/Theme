@@ -150,7 +150,7 @@ section {
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin: 0 auto;
-  margin-bottom: 74px;
+  margin-bottom: 63px;
 }
 
 @media screen and (max-width: 767px) {
@@ -176,7 +176,7 @@ section {
 }
 
 .card_container a .card {
-  height: 390px;
+  height: 402px;
   width: 320px;
   -webkit-transition: all .3s;
   transition: all .3s;
@@ -196,6 +196,10 @@ section {
   height: 140px;
   max-width: 320px;
   margin: 0 auto;
+}
+
+.card_container a .card .card_text .rmcss {
+  border-bottom: solid 1px black;
 }
 
 .card_container a .card .card_text p {
