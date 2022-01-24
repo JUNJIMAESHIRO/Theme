@@ -143,6 +143,22 @@ section{
           border-bottom:solid 1px black ;
           padding-left: 235px;
           font-size: 12px;
+          padding-bottom: 2px;
+          position: relative;
+          &:after{
+            content: '';
+            position: absolute;
+            width: 0;
+            right: 0;
+            bottom: 0;
+            transition: all 0.3s ease;
+            border-bottom: 3px solid #000;
+            display: block;
+          }
+          &:hover:after{
+            width: 100%;
+            border-bottom: 3px solid #000;
+          }
         }
         p{
           margin-top: 11px;
