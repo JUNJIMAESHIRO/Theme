@@ -113,7 +113,7 @@ section{
 }
 
 .card_container{
-  width: 1024px;
+  width: 1023px;
   display: flex;
   justify-content: space-between;
   margin: 0 auto; 
@@ -124,23 +124,29 @@ section{
     flex-direction: column;
     align-items: center;
   }
-  .card{
-    height: 390px;
-    width: 320px;
-    transition: all .2s;
-    &:hover{
-      box-shadow: 0 0 10px -2px;
-    }
-    p{
-      padding-left: 210px;
-    }
-    .card_text{
-      height: 135px;
-      max-width: 320px;
-      margin: 0 auto;
+  a{
+    text-decoration: none;
+    color: black;
+    .card{
+      height: 390px;
+      width: 320px;
+      transition: all .2s;
+      &:hover{
+        box-shadow: 0 0 10px -2px;
+      }
       p{
-        margin-top: 20px;
-        padding-left: 10px;
+        padding-left: 210px;
+      }
+      .card_text{
+        height: 135px;
+        max-width: 320px;
+        margin: 0 auto;
+        p{
+          margin-top: 11px;
+          padding-left: 16px;
+          line-height: 21px;
+          font-size: 15.5px;
+        }
       }
     }
   }
