@@ -104,7 +104,7 @@ section {
 @media screen and (max-width: 767px) {
   .main_img_box .main_img_right_subbox {
     top: 31px;
-    left: 33;
+    left: 33px;
   }
 }
 
@@ -124,12 +124,12 @@ section {
 
 .textbox .av_text {
   margin-top: 19px;
-  margin-top: -25px;
 }
 
 @media screen and (max-width: 767px) {
   .textbox .av_text {
     text-align: center;
+    margin-top: -25px;
   }
 }
 

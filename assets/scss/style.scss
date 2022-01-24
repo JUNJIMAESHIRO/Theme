@@ -82,7 +82,7 @@ section{
     left: 591px;
     @media screen and (max-width: $mb) {
       top: 31px;
-      left: 33;
+      left: 33px;
     }
   }
 }
@@ -100,8 +100,8 @@ section{
     margin-top: 19px;
     @media screen and (max-width: $mb){
       text-align: center;
+      margin-top: -25px;
     }
-    margin-top: -25px;
     .br{
       display: none;
       @media screen and (max-width: $mb){
