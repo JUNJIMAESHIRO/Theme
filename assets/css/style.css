@@ -193,7 +193,7 @@ section {
 
 .card_container a .card .rmcssbox .rmcss {
   border-bottom: solid 1px black;
-  padding-left: 234px;
+  margin-left: 231px;
   font-size: 12px;
   padding-bottom: 14px;
   position: relative;
