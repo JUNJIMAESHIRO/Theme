@@ -1,20 +1,10 @@
-header {
-  padding-top: 56px;
-  padding-bottom: 55px;
-}
-
-@media screen and (max-width: 767px) {
-  header {
-    display: none;
-  }
-}
-
-header .header_container {
+.header_container {
   max-width: 1152px;
   margin: 0 auto;
+  padding: 56px 0;
 }
 
-header .header_container .header_menu {
+.header_container .header_menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -23,29 +13,20 @@ header .header_container .header_menu {
           justify-content: end;
 }
 
-header .header_container .header_menu .header_content {
-  list-style: none;
-  margin-left: 29.6px;
-  margin-right: 1px;
-}
-
-header .header_container .header_menu .header_content a {
+.header_container .header_menu .header_content a {
   text-decoration: none;
   color: black;
-  font-family: YuGothic,'Yu Gothic',sans-serif;
-  font-size: 14px;
-}
-
-section {
-  max-width: 1152px;
-  margin: 0 auto;
+  font-family: YuGothic, "Yu Gothic", sans-serif;
+  margin-left: 23px;
+  font-weight: bold;
+  font-size: 15px;
 }
 
 .pc_img {
   display: block;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1152px) {
   .pc_img {
     display: none;
     width: 100%;
@@ -56,7 +37,7 @@ section {
   display: none;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1152px) {
   .sp_img {
     display: block;
     width: 100%;
@@ -64,192 +45,113 @@ section {
 }
 
 .main_img_box {
-  position: relative;
-  height: 449px;
-  width: 1023px;
+  max-width: 1152px;
   margin: 0 auto;
-}
-
-@media screen and (max-width: 767px) {
-  .main_img_box {
-    margin-top: 278px;
-    margin-bottom: 290px;
-    height: 300px;
-    width: 100%;
-  }
-}
-
-.main_img_box .main_img_left_subbox,
-.main_img_box .main_img_right_subbox {
-  position: absolute;
+  position: relative;
 }
 
 .main_img_box .main_img_left_subbox {
-  top: -116px;
-  left: -62px;
+  position: absolute;
+  top: -115px;
+  left: 0;
 }
 
-@media screen and (max-width: 767px) {
-  .main_img_box .main_img_left_subbox {
-    top: -273px;
-    left: 252px;
-  }
+.main_img_box .main_img {
+  width: 1024px;
+  height: 448px;
+  margin: 0 auto;
 }
 
 .main_img_box .main_img_right_subbox {
+  position: absolute;
   top: 237px;
-  left: 591px;
-}
-
-@media screen and (max-width: 767px) {
-  .main_img_box .main_img_right_subbox {
-    top: 31px;
-    left: 33px;
-  }
+  left: 655px;
 }
 
 .textbox {
-  max-width: 1152px;
-  margin: 0 auto;
-  font-size: 24px;
-  padding-left: 5px;
-}
-
-@media screen and (max-width: 767px) {
-  .textbox {
-    padding-left: none;
-    font-size: 32px;
-  }
+  margin: 20px 0 40px 0;
 }
 
 .textbox .av_text {
-  margin-top: 19px;
-}
-
-@media screen and (max-width: 767px) {
-  .textbox .av_text {
-    text-align: center;
-    margin-top: -25px;
-  }
+  font-size: 24px;
+  font-family: YuGothic, "Yu Gothic", sans-serif;
+  letter-spacing: 0.2px;
+  padding-left: 145px;
 }
 
 .textbox .av_text .br {
   display: none;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1152px) {
   .textbox .av_text .br {
     display: block;
   }
 }
 
-.subtitle {
-  text-align: center;
-  font-size: 27px;
-  margin-top: 83px;
-  margin-bottom: 54px;
+.latest_articles {
+  max-width: 1152px;
+  margin: 0 auto;
+  margin-top: 82px;
 }
 
-.card_container {
-  width: 1023px;
+.latest_articles .subtitle {
+  text-align: center;
+  font-size: 30px;
+  font-family: YuGothic, "Yu Gothic", sans-serif;
+  margin-bottom: 51px;
+}
+
+.latest_articles .card_container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  margin: 0 auto;
-  margin-bottom: 63px;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  max-width: 1125px;
+  margin: 0 48px;
+  margin-bottom: 65px;
 }
 
-@media screen and (max-width: 767px) {
-  .card_container {
-    width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-}
-
-.card_container a {
+.latest_articles .card_container a {
   text-decoration: none;
   color: black;
-  letter-spacing: 0.3px;
-}
-
-.card_container a .card {
-  height: 402px;
   width: 320px;
-  -webkit-transition: all .3s;
-  transition: all .3s;
+  height: 400px;
+  -webkit-transition: all .4s;
+  transition: all .4s;
 }
 
-.card_container a .card:hover {
-  -webkit-box-shadow: 0 0 10px -2px;
-          box-shadow: 0 0 10px -2px;
+.latest_articles .card_container a:hover {
+  -webkit-box-shadow: 0 0 30px -10px black;
+          box-shadow: 0 0 30px -10px black;
 }
 
-.card_container a .card .rmcssbox {
-  width: 77%;
-}
-
-.card_container a .card .rmcssbox .rmcss {
-  border-bottom: solid 1px black;
-  margin-left: 231px;
-  font-size: 12px;
-  padding-bottom: 14px;
-  position: relative;
-}
-
-.card_container a .card .rmcssbox .rmcss::after {
-  content: '';
-  position: absolute;
-  width: 0;
-  right: 0;
-  bottom: 0;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-  border-bottom: 1px solid #000;
-  display: block;
-}
-
-.card_container a .card .rmcssbox .rmcss:hover::after {
+.latest_articles .card_container a .card img {
   width: 100%;
-  border-bottom: 1px solid #000;
+  height: auto;
 }
 
-.card_container a .card .card_text {
-  height: 140px;
-  max-width: 320px;
-  margin: 0 auto;
+.latest_articles .card_container a .card .card_text {
+  padding-left: 15px;
+  height: 150px;
 }
 
-.card_container a .card .card_text p {
-  margin-top: 11px;
-  padding-left: 16px;
-  line-height: 21px;
-  font-size: 15.5px;
+.latest_articles .card_container a .card .card_text p {
+  font-size: 16.1px;
+  font-family: YuGothic, "Yu Gothic", sans-serif;
+  padding-top: 12px;
+  padding-bottom: 4px;
+  line-height: 18px;
 }
 
-footer {
-  max-width: 1281px;
-  margin: 0 auto;
-  margin-top: 127px;
-  height: 73px;
-  background-color: black;
-  padding-top: 56px;
-  letter-spacing: 0.2px;
+.latest_articles .card_container a .card .rm_box {
+  margin-top: 1px;
+  margin-right: 13px;
 }
 
-footer p {
-  color: white;
-  text-align: center;
+.latest_articles .card_container a .card .rm_box .readmore {
+  text-align: end;
+  font-size: 12px;
 }
 /*# sourceMappingURL=style.css.map */
