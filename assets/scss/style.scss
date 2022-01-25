@@ -1,195 +1,158 @@
-// body{
-//   max-width: 1152px;
-//   margin: 0 auto;
-// }
+// breakepointの値
+$bp:1152px;
+// margin 0 autoの関数
+$m0a:0 auto;
+// font-familyの設定
+$ff:YuGothic,'Yu Gothic',sans-serif;
 
-$mb: 767px;
-
-header{
-  padding-top: 56px;
-  padding-bottom: 55px;
-  @media screen and (max-width: $mb){
-    display: none;
-  }
-  .header_container{
-    max-width: 1152px;
-    margin: 0 auto;
-    .header_menu{
-      display: flex;
-      justify-content: end;
-      .header_content{
-        list-style: none;
-        margin-left: 29.6px;
-        margin-right: 1px;
-        a{
-          text-decoration: none;
-          color: black;
-          font-family: YuGothic,'Yu Gothic',sans-serif;
-          font-size: 14px;
-        }
+// headerのcss
+.header_container{
+  max-width: $bp;
+  margin: $m0a;
+  padding: 56px 0;
+  .header_menu{
+    display: flex;
+    justify-content: end;
+    .header_content{
+      a{
+        text-decoration: none;
+        color: black;
+        font-family: $ff;
+        margin-left: 23px;
+        font-weight: bold;
+        font-size: 15px;
       }
     }
   }
 }
-
-section{
-  max-width: 1152px;
-  margin: 0 auto;
-}
+//headerのcssここまで
 
 // ここからmain_visualのPC用とSp用の画像切り替え用CSS
 .pc_img{
-  display: block; 
-  @media screen and (max-width: $mb){
+  display: block;
+  @media screen and (max-width: $bp){
     display: none;
     width: 100%;
   }
 }
 .sp_img{
-  display: none; 
-  @media screen and (max-width: $mb){
+  display: none;
+  @media screen and (max-width: $bp){
     display: block;
     width: 100%;
   }
 }
-// main_visualのPC用とSp用の画像切り替え用CSSここまで
+// ここまでmain_visualのPC用とSp用の画像切り替え用CSS
 
+// ここから親となるmain_img_boxの設定
+//親となるbox
 .main_img_box{
+  max-width: $bp;
+  margin: $m0a;
   position: relative;
-  height: 449px;
-  width: 1023px;
-  margin: 0 auto;
-  @media screen and (max-width: $mb){
-    margin-top: 278px;
-    margin-bottom: 290px;
-    height: 300px;
-    width: 100%;
+  //黒い丸、アメリカンビレッジのロゴ
+  .main_img_left_subbox{
+    position: absolute;
+    top: -115px;
+    left: 0;
   }
-  .main_img_left_subbox,
+  //アメリカンビレッジの背景や風景写真
+  .main_img{
+    width: 1024px;
+    height: 448px;
+    margin: $m0a;
+  }
+  //アメリカンビレッジのテキストロゴ
   .main_img_right_subbox{
     position: absolute;
-  }
-  .main_img_left_subbox{
-    top: -116px;
-    left: -62px;
-    @media screen and (max-width: $mb){
-      top: -273px;
-      left: 252px;
-    }
-  }
-  .main_img_right_subbox{
     top: 237px;
-    left: 591px;
-    @media screen and (max-width: $mb) {
-      top: 31px;
-      left: 33px;
-    }
+    left: 655px;
   }
 }
+// ここまで親となるmain_img_boxの設定
 
+// ここから進化し続ける...のテキストCSS
 .textbox{
-  max-width: 1152px;
-  margin: 0 auto;
-  font-size: 24px;
-  padding-left: 5px;
-  @media screen and (max-width: $mb){
-    padding-left: none;
-    font-size: 32px;
-  }
+  margin: 20px 0 40px 0;
+  // テキストの左側からの位置とFontのサイズの設定
   .av_text{
-    margin-top: 19px;
-    @media screen and (max-width: $mb){
-      text-align: center;
-      margin-top: -25px;
-    }
+    font-size: 24px;
+    font-family: $ff;
+    letter-spacing: 0.2px;
+    padding-left: 145px;
+    // 段落をSP時に発生させて、PC時に無しにする
     .br{
       display: none;
-      @media screen and (max-width: $mb){
+      @media screen and (max-width: $bp){
         display: block;
       }
     }
   }
 }
+// ここまで進化し続ける...のテキストCSS
 
-.subtitle{
-  text-align: center;
-  font-size: 27px;
-  margin-top: 83px;
-  margin-bottom: 54px;
-}
-
-.card_container{
-  width: 1023px;
-  display: flex;
-  justify-content: space-between;
-  margin: 0 auto; 
-  margin-bottom: 63px;
-  @media screen and (max-width: $mb){
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+// ここからLatest ArticlesのCSS
+.latest_articles{
+  max-width: $bp;
+  margin: $m0a;
+  margin-top: 82px;
+  // 見出しのCSS
+  .subtitle{
+    text-align: center;
+    font-size: 30px;
+    font-family: $ff;
+    margin-bottom: 51px;
   }
-  a{
-    text-decoration: none;
-    color: black;
-    letter-spacing: 0.3px;
-    .card{
-      height: 402px;
+  // ここから記事一覧（card_container）のCSS
+  .card_container{
+    display: flex;
+    justify-content: space-around;
+    max-width: 1125px;
+    margin: 0 48px;
+    margin-bottom: 65px;
+    // カードをaタグで囲っているから、aタグにカードの大きさの指定をしている
+    a{
+      text-decoration: none;
+      color: black;
       width: 320px;
-      transition: all .3s;
+      height: 400px;
+      // hover後に影がつく間隔の指定
+      transition: all .4s;
       &:hover{
-        box-shadow: 0 0 10px -2px;
+        // 影がつく際の値
+        box-shadow: 0 0 30px -10px black;
       }
-      .rmcssbox{
-        width: 77%;
-        .rmcss{
-          border-bottom:solid 1px black ;
-          margin-left: 231px;
-          font-size: 12px;
-          padding-bottom: 14px;
-          position: relative;
-          &::after{
-            content: '';
-            position: absolute;
-            width: 0;
-            right: 0;
-            bottom: 0;
-            transition: all 0.3s ease;
-            border-bottom: 1px solid #000;
-            display: block;
-          }
-          &:hover::after{
-            width: 100%;
-            border-bottom: 1px solid #000;
+      .card{
+        // imgが画面幅に応じて大きさが変化するようにするための箇所
+        img{
+          width: 100%;
+          height: auto;
+        }
+        // 日付と記事が書かれているところのカード内の位置と縦幅の指定
+        .card_text{
+          padding-left: 15px;
+          height: 150px;
+          // 日付と記事の題名のテキストの調整
+          p{
+            font-size: 16.1px;
+            font-family: $ff;
+            padding-top: 12px;
+            padding-bottom: 4px;
+            line-height: 18px;
           }
         }
-      }
-      .card_text{
-        height: 140px;
-        max-width: 320px;
-        margin: 0 auto;
-        p{
-          margin-top: 11px;
-          padding-left: 16px;
-          line-height: 21px;
-          font-size: 15.5px;
+        // ReadMoreのcss
+        .rm_box{
+          margin-top: 1px;
+          margin-right: 13px;
+          .readmore{
+            text-align: end;
+            font-size: 12px;
+          }
         }
       }
     }
   }
 }
+// ここまでLatest ArticlesのCSS
 
-footer{
-  max-width: 1281px;
-  margin: 0 auto;
-  margin-top: 127px;
-  height: 73px;
-  background-color: black;
-  padding-top: 56px;
-  letter-spacing: 0.2px;
-  p{
-    color: white;
-    text-align: center;   
-  }
-}
