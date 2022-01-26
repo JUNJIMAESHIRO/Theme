@@ -1,5 +1,7 @@
 // breakepointの値
-$bp:1152px;
+$bp:767px;
+// Max-width
+$mw:1152px;
 // margin 0 autoの関数
 $m0a:0 auto;
 // font-familyの設定
@@ -7,13 +9,18 @@ $ff:YuGothic,'Yu Gothic',sans-serif;
 
 // headerのcss
 .header_container{
-  max-width: $bp;
+  max-width: $mw;
   margin: $m0a;
+  // headerの高さの位置調整
   padding: 56px 0;
+  @media screen and (max-width: $bp){
+    display: none;
+  }
   .header_menu{
     display: flex;
     justify-content: end;
     .header_content{
+      // headerの文字のプロパティの指定
       a{
         text-decoration: none;
         color: black;
@@ -47,39 +54,83 @@ $ff:YuGothic,'Yu Gothic',sans-serif;
 // ここから親となるmain_img_boxの設定
 //親となるbox
 .main_img_box{
-  max-width: $bp;
+  max-width: $mw;
   margin: $m0a;
   position: relative;
-  //黒い丸、アメリカンビレッジのロゴ
+  @media screen and (max-width: $bp){
+    height: auto;
+    width: 100%;
+  }
+  //アメリカンビレッジのロゴ
   .main_img_left_subbox{
     position: absolute;
     top: -115px;
     left: 0;
+    @media screen and (max-width: $bp){
+      // position:absoluteの解除
+      position: static;
+      height: 278px;
+      }
+    // SPに切り替わるタイミングのimgのサイズの調整
+    img{
+      @media screen and (max-width: $bp){
+        height: 215px;
+        width: auto;
+        margin: 32px 267px;
+      }
+    }
   }
+
   //アメリカンビレッジの背景や風景写真
   .main_img{
     width: 1024px;
     height: 448px;
     margin: $m0a;
+    // breakpointに合わせて、サイズの変更するための指定
+    @media screen and (max-width: $bp){
+      // 元の画像の縦幅
+      height: auto;
+      width: 100%;
+    }
   }
   //アメリカンビレッジのテキストロゴ
   .main_img_right_subbox{
     position: absolute;
     top: 237px;
     left: 655px;
+    @media screen and (max-width: $bp){
+      top: 310px;
+      left: 32px;
+    }
+    img{
+      @media screen and (max-width: $bp){
+        height: 100%;
+        width: 100%;
+      }
+    }
   }
 }
 // ここまで親となるmain_img_boxの設定
 
 // ここから進化し続ける...のテキストCSS
 .textbox{
-  margin: 20px 0 40px 0;
+  margin: 20px 0 40px;
+  @media screen and (max-width: $bp){
+    text-align: center;
+    margin: 18px 0;
+  }
   // テキストの左側からの位置とFontのサイズの設定
   .av_text{
     font-size: 24px;
     font-family: $ff;
     letter-spacing: 0.2px;
     padding-left: 145px;
+    @media screen and (max-width: $bp){
+      font-size: 32px;
+      padding-left: 0;
+      line-height: 50px;
+      letter-spacing: 0.4px;
+    }
     // 段落をSP時に発生させて、PC時に無しにする
     .br{
       display: none;
@@ -93,15 +144,22 @@ $ff:YuGothic,'Yu Gothic',sans-serif;
 
 // ここからLatest ArticlesのCSS
 .latest_articles{
-  max-width: $bp;
+  max-width: $mw;
   margin: $m0a;
   margin-top: 82px;
+  @media screen and (max-width: $bp){
+    margin-top: 41px;
+  }
   // 見出しのCSS
   .subtitle{
     text-align: center;
     font-size: 30px;
     font-family: $ff;
     margin-bottom: 51px;
+    @media screen and (max-width: $bp){
+      font-size: 60px;
+      margin-bottom: 22px;
+    }
   }
   // ここから記事一覧（card_container）のCSS
   .card_container{
@@ -109,18 +167,32 @@ $ff:YuGothic,'Yu Gothic',sans-serif;
     justify-content: space-around;
     max-width: 1125px;
     margin: 0 48px;
-    margin-bottom: 65px;
+    padding-bottom: 65px;
+    @media screen and (max-width: $bp){
+      display: block;
+      margin: 0;
+    }
     // カードをaタグで囲っているから、aタグにカードの大きさの指定をしている
     a{
       text-decoration: none;
       color: black;
       width: 320px;
       height: 400px;
-      // hover後に影がつく間隔の指定
-      transition: all .4s;
+      // hover後のアニメーションの指定
+      transition: all 1s;
       &:hover{
         // 影がつく際の値
         box-shadow: 0 0 30px -10px black;
+        // readmoreのborder-bottomがaタグhover後に左に伸る
+        .readmore::before{
+          content: '';
+          position: absolute;
+          left: 100%;
+          bottom: -15px;
+          transform: translateX(-100%);
+          border-bottom: solid 1px black;
+          animation: border_anim 0.3s linear forwards;
+        }
       }
       .card{
         // imgが画面幅に応じて大きさが変化するようにするための箇所
@@ -143,11 +215,29 @@ $ff:YuGothic,'Yu Gothic',sans-serif;
         }
         // ReadMoreのcss
         .rm_box{
+          width: 71px;
+          margin-left: 235px;
           margin-top: 1px;
-          margin-right: 13px;
+          .border_animation{
+            width: 15px;
+            margin-left: 55px;
+            padding-bottom: 14px;
+            border-bottom: solid 1px black;
+            // border_bottomのアニメーション用でrelativeを指定する
+            @keyframes border_anim {
+              0%{
+                width: 15px;
+              }
+              100%{
+                width: 100%;
+              }
+            }
+          }
           .readmore{
-            text-align: end;
+            width: 100%;
             font-size: 12px;
+            position: relative;
+            transition: all 1s;
           }
         }
       }
@@ -156,3 +246,19 @@ $ff:YuGothic,'Yu Gothic',sans-serif;
 }
 // ここまでLatest ArticlesのCSS
 
+// ここからfooterの指定
+footer{
+  max-width: 1281px;
+  margin: 0 auto;
+  background-color: black;
+  height: 140px;
+  margin-top: 65px;
+  p{
+    padding-top: 55px;
+    font-size: 17px;
+    color: white;
+    text-align: center;
+    font-family: $ff;
+  }
+}
+// ここまでfooterの指定
