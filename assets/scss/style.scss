@@ -7,6 +7,14 @@ $m0a:0 auto;
 // font-familyの設定
 $ff:YuGothic,'Yu Gothic',sans-serif;
 
+html{
+  font-size: 62.5%;
+}
+
+p{
+  font-size: 1.6em;
+}
+
 // headerのcss
 .header_container{
   max-width: $mw;
@@ -27,7 +35,7 @@ $ff:YuGothic,'Yu Gothic',sans-serif;
         font-family: $ff;
         margin-left: 23px;
         font-weight: bold;
-        font-size: 15px;
+        font-size: 1.5rem;
       }
     }
   }
@@ -69,14 +77,14 @@ $ff:YuGothic,'Yu Gothic',sans-serif;
     @media screen and (max-width: $bp){
       // position:absoluteの解除
       position: static;
-      height: 278px;
+      margin: 4% 0;
+      text-align: center;
       }
     // SPに切り替わるタイミングのimgのサイズの調整
     img{
       @media screen and (max-width: $bp){
-        height: 215px;
-        width: auto;
-        margin: 32px 267px;
+        height: auto;
+        width: 29%;
       }
     }
   }
@@ -99,8 +107,9 @@ $ff:YuGothic,'Yu Gothic',sans-serif;
     top: 237px;
     left: 655px;
     @media screen and (max-width: $bp){
-      top: 310px;
-      left: 32px;
+      width: 67%;
+      top: 35%;
+      left: 4%;
     }
     img{
       @media screen and (max-width: $bp){
@@ -117,19 +126,18 @@ $ff:YuGothic,'Yu Gothic',sans-serif;
   margin: 20px 0 40px;
   @media screen and (max-width: $bp){
     text-align: center;
-    margin: 18px 0;
+    margin: 10px 0;
   }
   // テキストの左側からの位置とFontのサイズの設定
   .av_text{
-    font-size: 24px;
+    font-size: 2.4rem;
     font-family: $ff;
     letter-spacing: 0.2px;
     padding-left: 145px;
     @media screen and (max-width: $bp){
-      font-size: 32px;
+      font-size: 1.6rem;
       padding-left: 0;
-      line-height: 50px;
-      letter-spacing: 0.4px;
+      line-height: 23px;
     }
     // 段落をSP時に発生させて、PC時に無しにする
     .br{
@@ -148,17 +156,17 @@ $ff:YuGothic,'Yu Gothic',sans-serif;
   margin: $m0a;
   margin-top: 82px;
   @media screen and (max-width: $bp){
-    margin-top: 41px;
+    margin-top: 6%;
   }
   // 見出しのCSS
   .subtitle{
     text-align: center;
-    font-size: 30px;
+    font-size: 3rem;
     font-family: $ff;
     margin-bottom: 51px;
     @media screen and (max-width: $bp){
-      font-size: 60px;
-      margin-bottom: 22px;
+      font-size: 3rem;
+      margin-bottom: 2.9%;
     }
   }
   // ここから記事一覧（card_container）のCSS
@@ -170,16 +178,28 @@ $ff:YuGothic,'Yu Gothic',sans-serif;
     padding-bottom: 65px;
     @media screen and (max-width: $bp){
       display: block;
-      margin: 0;
+      margin: 0 8%;
+      padding-bottom: 0;
+    }
+    &:nth-of-type(2){
+      margin-top: -4.5%;
     }
     // カードをaタグで囲っているから、aタグにカードの大きさの指定をしている
     a{
+      display: block;
       text-decoration: none;
       color: black;
       width: 320px;
-      height: 400px;
+      @media screen and (max-width: $bp){
+        width: auto;
+      }
       // hover後のアニメーションの指定
       transition: all 1s;
+      &:nth-of-type(3){
+        .card{
+          padding-bottom: 0;
+        }
+      }
       &:hover{
         // 影がつく際の値
         box-shadow: 0 0 30px -10px black;
@@ -195,6 +215,9 @@ $ff:YuGothic,'Yu Gothic',sans-serif;
         }
       }
       .card{
+        @media screen and (max-width: $bp){
+          margin-bottom: 9.7%;
+        }
         // imgが画面幅に応じて大きさが変化するようにするための箇所
         img{
           width: 100%;
@@ -204,13 +227,22 @@ $ff:YuGothic,'Yu Gothic',sans-serif;
         .card_text{
           padding-left: 15px;
           height: 150px;
+          @media screen and (max-width: $bp){
+            padding-left: 5%;
+            height: auto;
+          }
           // 日付と記事の題名のテキストの調整
           p{
-            font-size: 16.1px;
+            font-size: 1.6rem;
             font-family: $ff;
             padding-top: 12px;
             padding-bottom: 4px;
             line-height: 18px;
+            @media screen and (max-width: $bp){
+              line-height: 15px;
+              padding-top: 4%;
+
+            }
           }
         }
         // ReadMoreのcss
@@ -218,6 +250,10 @@ $ff:YuGothic,'Yu Gothic',sans-serif;
           width: 71px;
           margin-left: 235px;
           margin-top: 1px;
+          @media screen and (max-width: $bp){
+            margin-left: 73%;
+            margin-top: 28.8%;
+          }
           .border_animation{
             width: 15px;
             margin-left: 55px;
@@ -235,7 +271,7 @@ $ff:YuGothic,'Yu Gothic',sans-serif;
           }
           .readmore{
             width: 100%;
-            font-size: 12px;
+            font-size: 1.1rem;
             position: relative;
             transition: all 1s;
           }
@@ -248,17 +284,22 @@ $ff:YuGothic,'Yu Gothic',sans-serif;
 
 // ここからfooterの指定
 footer{
-  max-width: 1281px;
-  margin: 0 auto;
   background-color: black;
   height: 140px;
   margin-top: 65px;
+  @media screen and (max-width: $bp){
+    margin-top: 10%;
+  }
   p{
     padding-top: 55px;
-    font-size: 17px;
+    font-size: 1.7rem;
     color: white;
     text-align: center;
     font-family: $ff;
+    @media screen and (max-width: $bp){
+      font-size: 1.3rem;
+      padding-top: 7%;
+    }
   }
 }
 // ここまでfooterの指定
